@@ -1,4 +1,8 @@
-export default function Element({ category, score, icon }) {
+import reaction from "./images/icon-reaction.svg";
+import memory from "./images/icon-memory.svg";
+import verbal from "./images/icon-verbal.svg";
+import visual from "./images/icon-visual.svg";
+export default function Element({ category, score }) {
   return (
     <div
       className={
@@ -13,7 +17,19 @@ export default function Element({ category, score, icon }) {
       }
     >
       <div className="flex flex-row justify-between">
-        <img src={`/src${icon}`} alt="picture_icon" className="mr-4" />
+        <img
+          src={
+            category == "Reaction"
+              ? reaction
+              : category == "Memory"
+              ? memory
+              : category == "Verbal"
+              ? verbal
+              : visual
+          }
+          alt="picture_icon"
+          className="mr-4"
+        />
         <p
           className={
             "text-lg " +
