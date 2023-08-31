@@ -13,7 +13,7 @@ export default function Element({ category, score, icon }) {
       }
     >
       <div className="flex flex-row justify-between">
-        <img src={`${icon}`} alt="picture_icon" className="mr-4" />
+        <img src={`/src${icon}`} alt="picture_icon" className="mr-4" />
         <p
           className={
             "text-lg " +
